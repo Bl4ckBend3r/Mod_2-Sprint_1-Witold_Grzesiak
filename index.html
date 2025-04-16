@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty - Lista Postaci</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="filters">
+    <input class="search-input" type="text" placeholder="Wyszukaj po nazwie..." />
+
+    <div class="radio-group">
+      <label><input type="radio" name="status" value="alive" checked /> Żywy</label>
+      <label><input type="radio" name="status" value="dead" /> Martwy</label>
+      <label><input type="radio" name="status" value="unknown" /> Nieznany</label>
+    </div>
+  </div>
+
+  <div class="characters-grid" id="character-container">
+    <!-- Kafelki postaci będą generowane dynamicznie tutaj -->
+  </div>
+
+  <div class="not-found" id="no-results" style="display: none;">
+    Nie znaleziono postaci spełniających kryteria wyszukiwania.
+  </div>
+
+  <div class="pagination">
+    <button id="prev-btn">Poprzednia</button>
+    <button id="next-btn">Następna</button>
+  </div>
+</body>
+</html>
