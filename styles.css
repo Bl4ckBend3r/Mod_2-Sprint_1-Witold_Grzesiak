@@ -3,6 +3,9 @@ body {
     background: #f0f2f5;
     margin: 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .filters {
@@ -11,6 +14,7 @@ body {
     align-items: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   
   .search-input {
@@ -30,6 +34,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
   }
   
   .card {
@@ -74,15 +81,28 @@ body {
   .pagination button {
     padding: 10px 15px;
     border: none;
-    background: #333;
+    background: #007bff;
     color: white;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: 0.2s ease;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .pagination button:hover {
-    background: #555;
+    background: #0056b3;
+  }
+  
+  .pagination button:disabled {
+    background: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
   }
   
   .not-found {
@@ -91,4 +111,3 @@ body {
     color: #888;
     margin-top: 30px;
   }
-  
