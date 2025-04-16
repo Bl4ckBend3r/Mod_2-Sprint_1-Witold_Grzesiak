@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty - Lista Postaci</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="filters">
+    <input class="search-input" type="text" placeholder="Wyszukaj po nazwie..." />
+
+    <div class="radio-group">
+      <input type="radio" name="status" value="Alive" checked /> Żywy
+      <input type="radio" name="status" value="Dead" /> Martwy
+      <input type="radio" name="status" value="unknown" /> Nieznany
+    </div>
+  </div>
+
+  <div class="characters-grid" id="character-container">
+    <!-- Kafelki postaci będą generowane dynamicznie tutaj -->
+  </div>
+
+  <div class="not-found" id="no-results" style="display: none;">
+    Nie znaleziono postaci spełniających kryteria wyszukiwania.
+  </div>
+
+  <div class="pagination">
+    <button id="prev-btn">&#8592;</button>
+    <button id="next-btn">&#8594;</button>
+
+  </div>
+  <div class="form-wrapper">
+    <form id="character-form">
+      <h2>Stwórz postać</h2>
+
+      <input type="text" name="name" placeholder="Nazwa postaci" required />
+
+      <select name="status" required>
+        <option value="Alive">Żywy</option>
+        <option value="Dead">Martwy</option>
+        <option value="unknown">Nieznany</option>
+      </select>
+
+      <input type="text" name="species" placeholder="Rasa" required />
+
+      <button type="submit">Stwórz</button>
+    </form>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
